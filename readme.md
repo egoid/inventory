@@ -1,4 +1,5 @@
-# Inventory Manager
+https://guarded-gorge-6315.herokuapp.com/#
 
-First, cd into the project directory, and do `npm run setup` to install the dependencies listed in the package.json and bower.json.  Then you can start the server in Node.
-asdfasdf
+
+Bugs:
+Was working on localserver, but once pushed to Heroku server, refresh seems to crash due to some database inconsistencies.
