@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
 });
 
 
-router.put('/:roomId/addItem/:itemId', function(req, res) {
+router.get('/:roomId/addItem/:itemId', function(req, res) {
   Room.findById(req.params.roomId, function(err, room){
     if(err) return res.status(400).send(err.message);
     Item.findById(req.params.itemId, function(err, item){
@@ -37,7 +37,7 @@ router.put('/:roomId/addItem/:itemId', function(req, res) {
 
 router.get('/:id', (req, res) => {
   Room.findById(req.params.id, function(err, room){
-    res.status(err ? 400 : 200).send(err ? 'room not found' : room);
+    res.status(err ? 400 : 200).send(err ? 'room not found' : room.items);
   });
 });
 
