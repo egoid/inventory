@@ -37,7 +37,7 @@ router.get('/:roomId/addItem/:itemId', function(req, res) {
 
 router.get('/:id', (req, res) => {
   Room.findById(req.params.id, function(err, room){
-    res.status(err ? 400 : 200).send(err ? 'room not found' : room.items);
+    res.status(err ? 400 : 200).send(err ? 'room not found' : room);
   });
 });
 
